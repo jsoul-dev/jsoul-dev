@@ -1,1 +1,1 @@
-![Profile banner](./profile.svg)
+![Profile banner](./header.svg)
