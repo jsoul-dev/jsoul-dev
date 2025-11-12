@@ -101,9 +101,10 @@
   <!-- Text section -->
   <g class="txt" transform="translate(130,50)">
     <text class="name">JC</text>
-    <text class="tag" y="30">Code • Discipline • Darkness</text>
+    <text class="tag" y="30"></text>
   </g>
 
   <!-- Footer -->
-  <text x="610" y="150" font-size="11" fill="#888" opacity="0.6">Inspired by Berserk • svg</text>
+  <text x="610" y="150" font-size="11" fill="#888" opacity="0.6"></text>
 </svg>
+
