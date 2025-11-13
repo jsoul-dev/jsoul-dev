@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="420" viewBox="0 0 500 420">
+  <style>
+    .title {
+      font: 700 22px 'Segoe UI', sans-serif;
+      fill: #ff00ff;
+      text-shadow: 0 0 8px #ff00ff;
+    }
+    .label {
+      font: 600 15px 'Segoe UI', sans-serif;
+      fill: #f5f5f5;
+    }
+    .label-small {
+      font: 600 13px 'Segoe UI', sans-serif;
+      fill: #f5f5f5;
+    }
+    .bar-outline {
+      stroke-width: 2;
+      fill: none;
+      stroke-linecap: round;
+      opacity: 0.7;
+    }
+    .bar-fill {
+      height: 10px;
+      rx: 3;
+      ry: 3;
+      filter: drop-shadow(0 0 6px currentColor);
+      animation: glow 2.5s ease-in-out infinite alternate;
+    }
+    .percent {
+      font: 500 11px 'Segoe UI', sans-serif;
+      fill: #ccc;
+    }
+
+    /* Floating particles */
+    .particle {
+      fill: #ff1e1e;
+      opacity: 0.4;
+      animation: float 6s ease-in-out infinite;
+    }
+    .particle:nth-child(2) { animation-duration: 7s; fill: #00f0ff; }
+    .particle:nth-child(3) { animation-duration: 8s; fill: #ff00ff; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); opacity: 0.3; }
+      50% { transform: translateY(-8px); opacity: 0.7; }
+    }
+
+    @keyframes glow {
+      0% { opacity: 0.7; }
+      100% { opacity: 1; filter: drop-shadow(0 0 10px currentColor); }
+    }
+  </style>
+
+  <!-- Floating particles -->
+  <circle class="particle" cx="450" cy="50" r="2"/>
+  <circle class="particle" cx="480" cy="120" r="3"/>
+  <circle class="particle" cx="420" cy="200" r="2.5"/>
+
+  <!-- Title -->
+  <text x="20" y="35" class="title">Dev_Tools</text>
+
+  <!-- Bars -->
+  <g transform="translate(0,60)">
+    <g transform="translate(0,0)">
+      <text x="20" y="15" class="label">VSCode</text>
+      <rect x="100" y="2" width="250" height="10" stroke="#f9ff00" class="bar-outline"/>
+      <rect x="100" y="2" width="0.25" fill="#f9ff00" class="bar-fill"/>
+      <text x="370" y="11" class="percent">0.01%</text>
+    </g>
+
+    <g transform="translate(0,40)">
+      <text x="20" y="15" class="label">Git</text>
+      <rect x="100" y="2" width="250" height="10" stroke="#00f0ff" class="bar-outline"/>
+      <rect x="100" y="2" width="0.25" fill="#00f0ff" class="bar-fill"/>
+      <text x="370" y="11" class="percent">0.01%</text>
+    </g>
+
+    <g transform="translate(0,80)">
+      <text x="20" y="15" class="label">Node.js</text>
+      <rect x="100" y="2" width="250" height="10" stroke="#ffa500" class="bar-outline"/>
+      <rect x="100" y="2" width="0.25" fill="#ffa500" class="bar-fill"/>
+      <text x="370" y="11" class="percent">0.01%</text>
+    </g>
+
+    <g transform="translate(0,120)">
+      <text x="20" y="15" class="label">Docker</text>
+      <rect x="100" y="2" width="250" height="10" stroke="#00b7ff" class="bar-outline"/>
+      <rect x="100" y="2" width="0.25" fill="#00b7ff" class="bar-fill"/>
+      <text x="370" y="11" class="percent">0.01%</text>
+    </g>
+
+    <g transform="translate(0,160)">
+      <text x="20" y="15" class="label">Postman</text>
+      <rect x="100" y="2" width="250" height="10" stroke="#ff4500" class="bar-outline"/>
+      <rect x="100" y="2" width="0.25" fill="#ff4500" class="bar-fill"/>
+      <text x="370" y="11" class="percent">0.01%</text>
+    </g>
+
+    <g transform="translate(0,200)">
+      <text x="20" y="15" class="label">Figma</text>
+      <rect x="100" y="2" width="250" height="10" stroke="#b100ff" class="bar-outline"/>
+      <rect x="100" y="2" width="0.25" fill="#b100ff" class="bar-fill"/>
+      <text x="370" y="11" class="percent">0.01%</text>
+    </g>
+
+    <!-- Fun one -->
+    <g transform="translate(0,250)">
+      <text x="20" y="13" class="label-small">Copy/Paste</text>
+      <rect x="100" y="2" width="250" height="10" stroke="#00ffb3" class="bar-outline"/>
+      <rect x="100" y="2" width="250" fill="#00ffb3" class="bar-fill" style="animation-duration:1.8s;"/>
+      <text x="370" y="11" class="percent">101%</text>
+    </g>
+  </g>
+</svg>
