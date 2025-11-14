@@ -1,9 +1,10 @@
 <div align="center">
   <img src="./header.svg"/>
   <br><br>
-  <img src="./image.png" height="400"/>
-  <br><br>
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=20&color=FF0000&center=true&pause=1000&width=350&height=50&lines=Hey+there!+Welcome+to+my+repo" alt="typing svg" />
+  
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=200&size=22&duration=1000&pause=1000&color=FF0000&vCenter=true&multiline=true&repeat=false&width=435&height=400&lines=%0A;%0A;%0A;Hey+there!+Welcome+to+my+repo;%0A;Building+innovative+solutions;%0A;Always+learning%2C+always+creating;%0A;Feel+free+to+explore+and+connect!" alt="Typing SVG" style="vertical-align: middle;" />
+  <img src="./image.png" height="400" style="vertical-align: middle;" />
+  
   <!--
   <br><br>
   <img src="./dev_tools.svg"/>
