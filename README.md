@@ -43,6 +43,7 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000) 
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white) 
 ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white) 
+![SQL](https://img.shields.io/badge/SQL-4479A1?logo=mysql&logoColor=white)
 ![C++](https://img.shields.io/badge/C++-00599C?logo=c%2B%2B&logoColor=white) 
 ![Java](https://img.shields.io/badge/Java-007396?logo=java&logoColor=white) 
 ![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?logo=powershell&logoColor=white) 
