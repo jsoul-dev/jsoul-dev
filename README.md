@@ -20,11 +20,14 @@
 
 <br>
 
+<!--
 [ **About Me** ]   
 - I'm an IT student with a strong interest in building, breaking, and understanding systems.   
 - I mainly use GitHub for learning, experiments, and improving my skills through hands-on projects.
-
+ 
+ 
 <br>
+-->
 
 [ **Interests** ]   
 - 🌐 Web Development   
@@ -34,12 +37,8 @@
 
 <br>
 
-[ **Tools & Skills** ]   
+[ **Tools** ]   
 
 ![Git](https://img.shields.io/badge/Git-000?logo=git&logoColor=F05032)
 ![GitHub](https://img.shields.io/badge/GitHub-000?logo=github)
 ![VS Code](https://img.shields.io/badge/VS%20Code-000?logo=visualstudiocode&logoColor=007ACC)
-
-- Automation & scripting
-- CLI-based workflows
-- Learning-focused development
