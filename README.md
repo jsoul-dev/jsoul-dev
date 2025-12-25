@@ -21,8 +21,11 @@
 <br>
 
 [ **About Me** ]  
-- I'm an IT student with a strong interest in building, breaking, and understanding systems.  
-- I mainly use GitHub for learning, experiments, and improving my skills through hands-on projects.
+- IT student passionate about building and exploring systems.
+- Enjoy experimenting with projects to learn and improve skills.
+- Love solving problems through practical, hands-on development.
+- Share work and ideas to collaborate with others and grow.
+- Constantly curious and eager to explore new technologies.
 
 <br>
 
