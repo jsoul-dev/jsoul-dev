@@ -20,14 +20,11 @@
 
 <br>
 
-<!--
 [ **About Me** ]   
 - I'm an IT student with a strong interest in building, breaking, and understanding systems.   
 - I mainly use GitHub for learning, experiments, and improving my skills through hands-on projects.
  
- 
 <br>
--->
 
 [ **Interests** ]   
 - 🌐 Web Development   
