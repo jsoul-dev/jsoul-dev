@@ -15,6 +15,8 @@
   
 </div>
 
+<!--
+
 [ Hi, I'm **John Carlo** 👋 ]  
 - 🎓 Student Developer
 
@@ -59,3 +61,5 @@
 ![GitHub](https://img.shields.io/badge/GitHub-000?logo=github) 
 ![VS Code](https://img.shields.io/badge/VS%20Code-000?logo=visualstudiocode&logoColor=007ACC) 
 ![FFmpeg](https://img.shields.io/badge/FFmpeg-000?logo=ffmpeg&logoColor=white)
+
+-->
