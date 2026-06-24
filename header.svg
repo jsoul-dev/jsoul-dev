@@ -2,7 +2,15 @@
   <defs>
     <!-- Red accent glow -->
     <radialGradient id="redGlow" cx="50%" cy="50%" r="60%">
-      <stop offset="0%" stop-color="#ff1e1e" stop-opacity="0.6"/>
+      <stop offset="0%" stop-color="#cc0000" stop-opacity="0.8"/>
+      <stop offset="40%" stop-color="#ff1e1e" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Eclipse Glow -->
+    <radialGradient id="eclipseGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="70%" stop-color="#000" stop-opacity="1"/>
+      <stop offset="85%" stop-color="#ff1e1e" stop-opacity="1"/>
       <stop offset="100%" stop-color="#000" stop-opacity="0"/>
     </radialGradient>
 
@@ -20,28 +28,30 @@
   </defs>
 
   <style>
+    .bg { fill: #050505; }
     .glow-red { stroke: #ff1e1e; }
-    .avatar-circle { fill: none; stroke: #ff1e1e; stroke-width: 2; }
-    .initials { font: 700 40px "Segoe UI", system-ui, sans-serif; fill: #f5f5f5; }
-    .name { font: 700 24px "Segoe UI", system-ui, sans-serif; fill: #f5f5f5; }
-    .tag { font: 400 14px "Segoe UI", system-ui, sans-serif; fill: #c0c0c0; }
+    .avatar-circle { fill: none; stroke: #ff1e1e; stroke-width: 2; filter: url(#glow); }
+    .initials { font: 700 36px "Cinzel", "Times New Roman", serif; fill: #f5f5f5; }
+    .name { font: 700 24px "Cinzel", "Times New Roman", serif; fill: #f5f5f5; }
+    .tag { font: 400 14px "Segoe UI", system-ui, sans-serif; fill: #888; }
 
-    /* floating red particles */
-    @keyframes float1 { 0% { transform: translateY(0); opacity:0.3 } 50% { transform: translateY(-6px); opacity:0.6 } 100% { transform: translateY(0); opacity:0.3 } }
-    @keyframes float2 { 0% { transform: translateY(0); opacity:0.2 } 50% { transform: translateY(6px); opacity:0.5 } 100% { transform: translateY(0); opacity:0.2 } }
-    .p1 { animation: float1 6s ease-in-out infinite; }
-    .p2 { animation: float2 7s ease-in-out infinite; }
+    /* floating red particles / ashes */
+    @keyframes float1 { 0% { transform: translate(0, 0); opacity:0 } 20% { opacity: 0.8 } 80% { opacity: 0.8 } 100% { transform: translate(15px, -20px); opacity:0 } }
+    @keyframes float2 { 0% { transform: translate(0, 0); opacity:0 } 20% { opacity: 0.6 } 80% { opacity: 0.6 } 100% { transform: translate(-10px, -25px); opacity:0 } }
+    .p1 { animation: float1 4s ease-in-out infinite; fill: #ff1e1e; }
+    .p2 { animation: float2 5s ease-in-out infinite; fill: #cc0000; }
+    .p3 { animation: float1 6s ease-in-out infinite; animation-delay: 2s; fill: #ff4444; }
 
     /* radial streak pulse animation */
     @keyframes streakPulse {
-      0% { stroke-opacity: 0.1; transform: scale(0.9); }
-      50% { stroke-opacity: 0.6; transform: scale(1.1); }
-      100% { stroke-opacity: 0.1; transform: scale(0.9); }
+      0% { opacity: 0.1; transform: scale(0.95); }
+      50% { opacity: 0.8; transform: scale(1.05); }
+      100% { opacity: 0.1; transform: scale(0.95); }
     }
 
-    .streaks line {
-      animation: streakPulse 1.5s ease-in-out infinite alternate;
-      transform-origin: 0 0;
+    .eclipse-corona {
+      animation: streakPulse 3s ease-in-out infinite alternate;
+      transform-origin: 50% 50%;
     }
 
     /* text entrance */
@@ -52,7 +62,8 @@
     .txt { animation: fadeIn 1s ease forwards; opacity: 0; }
     
     /* Typing animation */
-    .typing-text { font: 400 20px "Fira Code", monospace, "Segoe UI"; fill: #ff1e1e; }
+    .typing-text { font: 700 22px "Courier New", monospace; fill: #e0e0e0; }
+    .highlight { fill: #ff1e1e; filter: url(#glow); }
     
     @keyframes typing {
       0%, 10% { opacity: 0; }
@@ -99,42 +110,48 @@
     .cursor {
       animation: blink 0.7s step-end infinite;
       animation-delay: 3s;
+      fill: #ff1e1e;
     }
   </style>
 
+  <!-- Background -->
+  <rect width="620" height="160" class="bg"/>
 
-
-  <!-- Avatar area -->
-  <g transform="translate(40,20)">
-    <!-- Avatar circle -->
-    <circle class="avatar-circle" cx="40" cy="60" r="36"/>
-    <!-- Radial red streaks behind avatar -->
-    <g transform="translate(40,60)">
-      <g class="streaks">
-        <line x1="0" y1="0" x2="60" y2="-10" stroke="#ff1e1e" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
-        <line x1="0" y1="0" x2="50" y2="20" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
-        <line x1="0" y1="0" x2="-55" y2="15" stroke="#ff1e1e" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
-        <line x1="0" y1="0" x2="-40" y2="-25" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
-        <line x1="0" y1="0" x2="30" y2="-35" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
-      </g>
-    </g>
-    <!-- Transparent inner circle -->
-    <circle cx="40" cy="60" r="30" fill="none" stroke="#2b2b2b" stroke-width="1.5"/>
-    <text class="initials" x="40" y="73" text-anchor="middle">JC</text>
+  <!-- Eclipse Background -->
+  <g transform="translate(480, 80)">
+    <circle cx="0" cy="0" r="140" fill="url(#redGlow)" opacity="0.6"/>
+    <circle cx="0" cy="0" r="65" fill="#ff1e1e" class="eclipse-corona" filter="url(#softBlur)"/>
+    <circle cx="0" cy="0" r="60" fill="#050505"/>
   </g>
 
-  <!-- Text section -->
-  <g class="txt" transform="translate(130,50)">
-    <text class="name">JC</text>
-    <text class="tag" y="30"></text>
+  <!-- Floating Ashes/Sparks -->
+  <circle cx="50" cy="120" r="1.5" class="p1"/>
+  <circle cx="150" cy="140" r="2" class="p2"/>
+  <circle cx="280" cy="110" r="1" class="p3"/>
+  <circle cx="420" cy="130" r="2.5" class="p1" style="animation-delay: 1s"/>
+  <circle cx="550" cy="90" r="1.5" class="p2" style="animation-delay: 2.5s"/>
+  <circle cx="100" cy="40" r="1.5" class="p3" style="animation-delay: 0.5s"/>
+  <circle cx="350" cy="30" r="2" class="p1" style="animation-delay: 1.5s"/>
+
+  <!-- Avatar area -->
+  <g transform="translate(60,20)">
+    <!-- Brand of Sacrifice inside Avatar -->
+    <g transform="translate(40,60)">
+      <path d="M 0,-22 L 0,22 M -3,-18 L 0,-24 L 3,-18 M 0,-2 L -16,-16 L -10,-22 M 0,-2 L 16,-16 L 10,-22 M 0,-5 L -16,10 L 0,22 L 16,10 Z" 
+            stroke="#ff1e1e" stroke-width="3" stroke-linejoin="miter" stroke-linecap="square" fill="none" filter="url(#glow)"/>
+      <path d="M 0,-22 L 0,22 M -3,-18 L 0,-24 L 3,-18 M 0,-2 L -16,-16 L -10,-22 M 0,-2 L 16,-16 L 10,-22 M 0,-5 L -16,10 L 0,22 L 16,10 Z" 
+            stroke="#ffffff" stroke-width="1" stroke-linejoin="miter" stroke-linecap="square" fill="none" opacity="0.6"/>
+    </g>
+    <!-- Avatar circle -->
+    <circle class="avatar-circle" cx="40" cy="60" r="36"/>
+    <!-- Transparent inner circle -->
+    <circle cx="40" cy="60" r="30" fill="none" stroke="#550000" stroke-width="1.5"/>
   </g>
 
   <!-- Typing SVG on the right -->
-  <g transform="translate(240,85)">
-    <text class="typing-text" text-anchor="start" font-size="20">
-      <tspan class="char char1">H</tspan><tspan class="char char2">e</tspan><tspan class="char char3">y</tspan><tspan class="char char4"> </tspan><tspan class="char char5">t</tspan><tspan class="char char6">h</tspan><tspan class="char char7">e</tspan><tspan class="char char8">r</tspan><tspan class="char char9">e</tspan><tspan class="char char10">!</tspan><tspan class="char char11"> </tspan><tspan class="char char12">W</tspan><tspan class="char char13">e</tspan><tspan class="char char14">l</tspan><tspan class="char char15">c</tspan><tspan class="char char16">o</tspan><tspan class="char char17">m</tspan><tspan class="char char18">e</tspan><tspan class="char char19"> </tspan><tspan class="char char20">t</tspan><tspan class="char char21">o</tspan><tspan class="char char22"> </tspan><tspan class="char char23">m</tspan><tspan class="char char24">y</tspan><tspan class="char char25"> </tspan><tspan class="char char26">r</tspan><tspan class="char char27">e</tspan><tspan class="char char28">p</tspan><tspan class="char char29">o</tspan><tspan class="cursor">|</tspan>
+  <g transform="translate(175,85)">
+    <text class="typing-text" text-anchor="start">
+      <tspan class="char char1">H</tspan><tspan class="char char2">e</tspan><tspan class="char char3">y</tspan><tspan class="char char4"> </tspan><tspan class="char char5">t</tspan><tspan class="char char6">h</tspan><tspan class="char char7">e</tspan><tspan class="char char8">r</tspan><tspan class="char char9">e</tspan><tspan class="char char10">!</tspan><tspan class="char char11"> </tspan><tspan class="char char12">W</tspan><tspan class="char char13">e</tspan><tspan class="char char14">l</tspan><tspan class="char char15">c</tspan><tspan class="char char16">o</tspan><tspan class="char char17">m</tspan><tspan class="char char18">e</tspan><tspan class="char char19"> </tspan><tspan class="char char20 highlight">S</tspan><tspan class="char char21 highlight">t</tspan><tspan class="char char22 highlight">r</tspan><tspan class="char char23 highlight">u</tspan><tspan class="char char24 highlight">g</tspan><tspan class="char char25 highlight">g</tspan><tspan class="char char26 highlight">l</tspan><tspan class="char char27 highlight">e</tspan><tspan class="char char28 highlight">r</tspan><tspan class="char char29 highlight">!</tspan>
     </text>
   </g>
-
-
 </svg>
