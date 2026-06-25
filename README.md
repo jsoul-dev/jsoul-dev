@@ -1,6 +1,6 @@
 <div align="center">
   
-  <img src="assets/berserk-banner.svg"/>
+  <img src="assets/berserk-banner.svg" alt="Berserk" />
 
   <!--
   <br>
