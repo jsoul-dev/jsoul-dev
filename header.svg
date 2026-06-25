@@ -114,14 +114,11 @@
     }
   </style>
 
-  <!-- Background -->
-  <rect width="620" height="160" class="bg"/>
 
   <!-- Eclipse Background -->
-  <g transform="translate(480, 80)">
-    <circle cx="0" cy="0" r="140" fill="url(#redGlow)" opacity="0.6"/>
-    <circle cx="0" cy="0" r="65" fill="#ff1e1e" class="eclipse-corona" filter="url(#softBlur)"/>
-    <circle cx="0" cy="0" r="60" fill="#050505"/>
+  <g transform="translate(484, 80)">
+    <circle cx="0" cy="0" r="70" fill="#ff1e1e" class="eclipse-corona" filter="url(#softBlur)"/>
+    <circle cx="0" cy="0" r="65" fill="#050505"/>
   </g>
 
   <!-- Floating Ashes/Sparks -->
@@ -151,7 +148,7 @@
   <!-- Typing SVG on the right -->
   <g transform="translate(175,85)">
     <text class="typing-text" text-anchor="start">
-      <tspan class="char char1">H</tspan><tspan class="char char2">e</tspan><tspan class="char char3">y</tspan><tspan class="char char4"> </tspan><tspan class="char char5">t</tspan><tspan class="char char6">h</tspan><tspan class="char char7">e</tspan><tspan class="char char8">r</tspan><tspan class="char char9">e</tspan><tspan class="char char10">!</tspan><tspan class="char char11"> </tspan><tspan class="char char12">W</tspan><tspan class="char char13">e</tspan><tspan class="char char14">l</tspan><tspan class="char char15">c</tspan><tspan class="char char16">o</tspan><tspan class="char char17">m</tspan><tspan class="char char18">e</tspan><tspan class="char char19"> </tspan><tspan class="char char20 highlight">S</tspan><tspan class="char char21 highlight">t</tspan><tspan class="char char22 highlight">r</tspan><tspan class="char char23 highlight">u</tspan><tspan class="char char24 highlight">g</tspan><tspan class="char char25 highlight">g</tspan><tspan class="char char26 highlight">l</tspan><tspan class="char char27 highlight">e</tspan><tspan class="char char28 highlight">r</tspan><tspan class="char char29 highlight">!</tspan>
+      <tspan class="char char1">H</tspan><tspan class="char char2">e</tspan><tspan class="char char3">y</tspan><tspan class="char char4"> </tspan><tspan class="char char5">t</tspan><tspan class="char char6">h</tspan><tspan class="char char7">e</tspan><tspan class="char char8">r</tspan><tspan class="char char9">e</tspan><tspan class="char char10">!</tspan><tspan class="char char11"> </tspan><tspan class="char char12">W</tspan><tspan class="char char13">e</tspan><tspan class="char char14">l</tspan><tspan class="char char15">c</tspan><tspan class="char char16">o</tspan><tspan class="char char17">m</tspan><tspan class="char char18">e</tspan><tspan class="char char19"> </tspan><tspan class="char char20 highlight">S</tspan><tspan class="char char21 highlight">t</tspan><tspan class="char char22 highlight">r</tspan><tspan class="char char23 highlight">u</tspan><tspan class="char char24 highlight">g</tspan><tspan class="char char25 highlight">g</tspan><tspan class="char char26 highlight">l</tspan><tspan class="char char27 highlight">e</tspan><tspan class="char char28 highlight">r</tspan>
     </text>
   </g>
 </svg>
