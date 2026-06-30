@@ -1,6 +1,8 @@
 <div align="center">
-  
-  <img src="assets/berserk.svg" alt="Berserk" />
+
+  <picture>
+    <img src="assets/berserk.svg" alt="Berserk" />
+  </picture>
 
   <!--
   <br>
